@@ -1,0 +1,309 @@
+/* Importação de fontes e FontAwesome */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Reset de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0c0f12; /* Fundo escuro */
+    color: #fff; /* Texto claro */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo do cabeçalho e navegação */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(12, 15, 18, 0.9); /* Fundo semitransparente */
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, padding-bottom 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1db954;
+    padding-bottom: 6px; /* Efeito de underline animado */
+}
+
+/* Canto esquerdo com ícones */
+.sidebar {
+    position: fixed;
+    left: 20px;
+    top: 150px; /* Ajusta a altura dos ícones */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+.sidebar a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #1db954;
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+.sidebar .icon {
+    display: block;
+    text-align: center;
+}
+
+/* Estilo da foto de perfil e descrição */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px; /* Ajuste do topo para não ficar muito colado ao cabeçalho */
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.profile .image {
+    width: 200px; /* Definindo o tamanho da imagem de perfil */
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile .description {
+    max-width: 600px;
+    color: #bbb;
+    font-size: 1.1rem;
+}
+
+/* Estilização da seção de contato */
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    margin-top: 120px;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #121212 40%, #0c0f12);
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(18, 18, 18, 0.9); /* Fundo suave */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+/* Campos de input */
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    background-color: #333;
+    border: 1px solid #1db954;
+    outline: none;
+}
+
+/* Estilo do botão de envio */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #16a34a;
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+/* Estilo do botão de voltar à página inicial */
+.back-to-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1db954; /* Cor verde consistente */
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #16a34a; /* Tom mais escuro no hover */
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+.back-to-home:focus {
+    outline: none;
+    box-shadow: 0 0 5px #1db954;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0c0f12;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section h2 {
+        font-size: 2.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    section .cta-button {
+        font-size: 1rem;
+    }
+
+    .sidebar {
+        top: 80px;
+        left: 10px;
+    }
+
+    .profile {
+        flex-direction: column;
+        margin-top: 100px; /* Ajusta o topo da foto */
+    }
+
+    .profile .image {
+        width: 150px; /* Foto ajustada para telas menores */
+        height: 150px;
+    }
+
+    .profile .description {
+        font-size: 1rem; /* Reduz a fonte para telas menores */
+        text-align: center;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    button[type="submit"] {
+        font-size: 1.1rem;
+    }
+    
+}
